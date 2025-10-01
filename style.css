@@ -10,6 +10,7 @@ body {
     background-color: #f8f9fa;
     color: #333;
     line-height: 1.6;
+    padding: 0;
 }
 
 .container {
@@ -30,7 +31,7 @@ body {
 .header-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 15px 0;
     gap: 20px;
 }
@@ -130,8 +131,9 @@ body {
 .user-actions {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 50px;
     flex-shrink: 0;
+  
 }
 
 .action-item {
@@ -282,7 +284,7 @@ body {
     background: white;
     border-radius: 12px;
     padding: 30px;
-    margin-bottom: 30px;
+   
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
@@ -423,7 +425,7 @@ body {
     background: white;
     border-radius: 12px;
     padding: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 0;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
@@ -432,7 +434,7 @@ body {
     background: white;
     border-radius: 12px;
     padding: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 0;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
@@ -522,7 +524,7 @@ body {
     background: white;
     border-radius: 12px;
     padding: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 0;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
@@ -567,6 +569,7 @@ body {
     position: relative;
     border-radius: 12px;
     overflow: hidden;
+    left: 90px;
 }
 
 .map-pin {
@@ -643,12 +646,12 @@ body {
     }
 }
 
-/* Articles Section */
+
 .articles-section {
     background: white;
-    border-radius: 12px;
-    padding: 30px;
-    margin: 30px 0 30px;
+  
+    padding: 0px;
+    margin: 0;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
@@ -731,8 +734,8 @@ body {
 
 /* Footer */
 .footer {
-
-    padding: 40px 0 30px;
+    background-color: #fbf3df;
+    padding: 50px 0;
     position: relative;
     overflow: hidden;
 }
@@ -744,25 +747,21 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="%23dee2e6" opacity="0.3"/><circle cx="80" cy="30" r="1.5" fill="%23dee2e6" opacity="0.3"/><circle cx="40" cy="70" r="2" fill="%23dee2e6" opacity="0.3"/><circle cx="70" cy="80" r="1.5" fill="%23dee2e6" opacity="0.3"/><circle cx="10" cy="60" r="1" fill="%23dee2e6" opacity="0.3"/></svg>') repeat;
-    opacity: 0.5;
+    opacity: 1;
 }
 
 .footer-content {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 40px;
+    display: grid;
+    grid-template-columns: auto 1fr auto auto auto;
+    align-items: center;
+    gap: 28px;
     position: relative;
     z-index: 2;
 }
 
 .footer-logo {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 10px;
-    flex-shrink: 0;
 }
 
 .footer-logo-icon {
@@ -786,19 +785,16 @@ body {
 
 .footer-nav {
     display: flex;
-    flex-direction: column;
-    gap: 12px;
-    flex: 1;
-    max-width: 300px;
+    align-items: center;
+    gap: 36px;
 }
 
 .footer-link {
-    color: #5a6c7d;
+    color: #6b6f73;
     text-decoration: none;
     font-size: 14px;
-    font-weight: 500;
-    transition: color 0.3s;
-    line-height: 1.4;
+    font-weight: 600;
+    transition: color 0.2s ease;
 }
 
 
@@ -812,21 +808,20 @@ body {
 
 .social-media {
     display: flex;
-    gap: 12px;
+    align-items: center;
+    gap: 16px;
 }
 
 .social-link {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    background: white;
+    width: 28px;
+    height: 28px;
+    background: transparent;
     border-radius: 50%;
     font-size: 18px;
     text-decoration: none;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: all 0.3s;
 }
 
 
@@ -834,10 +829,6 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
-    background: white;
-    padding: 12px 20px;
-    border-radius: 25px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .phone-icon {
@@ -846,14 +837,14 @@ body {
 
 .phone-text {
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 600;
     color: #2c3e50;
 }
 
 .design-credit {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 8px;
     font-size: 12px;
     color: #6c757d;
 }
@@ -863,7 +854,7 @@ body {
     color: #27ae60;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
@@ -879,6 +870,7 @@ body {
         flex-wrap: wrap;
         justify-content: center;
         gap: 15px;
+        margin-left: 100px;
     }
     
     .banner-content {
@@ -1050,15 +1042,17 @@ body {
     }
     
     .footer-content {
-        flex-direction: column;
-        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
         text-align: center;
-        gap: 30px;
+        gap: 16px;
     }
     
     .footer-nav {
-        max-width: none;
-        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
     }
     
     .footer-contacts {
